@@ -304,7 +304,7 @@ function autoMap() {
         shouldDoMaps = false;
     else if (game.global.mapBonus >= getPageSetting('MaxMapBonuslimit') && shouldFarm)
         shouldFarmLowerZone = getPageSetting('LowerFarmingZone');
-    else if (game.global.mapBonus < getPageSetting('MaxMapBonushealth') && !enoughHealth && !shouldDoMaps && !needPrestige) {
+    else if (1 <= getPageSetting('MaxMapBonushealth') && !enoughHealth && !shouldDoMaps && !needPrestige) {
         shouldDoMaps = true;
         shouldDoHealthMaps = true;
     }
@@ -642,7 +642,7 @@ function autoMap() {
             if (!shouldDoMaps && (game.global.mapGridArray[game.global.mapGridArray.length - 1].special == targetPrestige && game.mapUnlocks[targetPrestige].last >= (game.global.world + extraMapLevels - 9))) {
                 repeatClicked();
             }
-            if (shouldDoHealthMaps && game.global.mapBonus >= getPageSetting('MaxMapBonushealth') - 1) {
+            if (shouldDoHealthMaps &&  enoughHealth) {
                 repeatClicked();
                 shouldDoHealthMaps = false;
             }
