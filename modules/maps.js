@@ -354,8 +354,10 @@ function autoMap() {
         }
     }
     
-    if (!enoughHealth || !enoughDamage)
+    if (!enoughHealth || !enoughDamage) {
         shouldFarm = true;
+        shouldDoMaps = true;
+    }
 
     //Spire
     var shouldDoSpireMaps = false;
@@ -605,6 +607,11 @@ function autoMap() {
         enoughHealth = true;
         shouldFarm = false;
         shouldDoMaps = false;
+    }
+    if (!enoughDamage || !enoughHealth)
+    {
+        shouldFarm = true;
+        shouldDoMaps = true;
     }
 
     //Automaps
