@@ -304,7 +304,7 @@ function autoMap() {
         shouldDoMaps = false;
     else if (game.global.mapBonus >= getPageSetting('MaxMapBonuslimit') && shouldFarm)
         shouldFarmLowerZone = getPageSetting('LowerFarmingZone');
-    else if ((1 <= getPageSetting('MaxMapBonushealth') && !enoughHealth) || !shouldDoMaps || !needPrestige) {
+    if (1 <= getPageSetting('MaxMapBonushealth') && !enoughHealth) {
         shouldDoMaps = true;
         shouldDoHealthMaps = true;
     }
