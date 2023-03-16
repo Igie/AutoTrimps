@@ -1,6 +1,6 @@
 //Helium
 MODULES.maps = {};
-MODULES.maps.numHitsSurvived = 8;
+MODULES.maps.numHitsSurvived = 16;
 MODULES.maps.LeadfarmingCutoff = 10;
 MODULES.maps.NomfarmingCutoff = 10;
 MODULES.maps.NomFarmStacksCutoff = [7, 30, 100];
