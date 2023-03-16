@@ -328,6 +328,8 @@ function autoMap() {
             restartVoidMap = true;
         }
     }
+    
+    
 
     //Prestige
     if (shouldFarm && !needPrestige) {
@@ -351,6 +353,9 @@ function autoMap() {
                 shouldDoMaps = false;
         }
     }
+    
+    if (!enoughHealth || !enoughDamage)
+        shouldFarm = true;
 
     //Spire
     var shouldDoSpireMaps = false;
