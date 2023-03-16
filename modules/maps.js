@@ -345,7 +345,7 @@ function autoMap() {
             if (game.upgrades[p].allowed - game.upgrades[p].done > 0)
                 numUnbought++;
         }
-        if (capped && prestigeitemsleft == 0 && numUnbought == 0) {
+        if (capped && prestigeitemsleft == 0 && numUnbought == 0 && enoughHealth) {
             shouldFarm = false;
             if (game.global.mapBonus >= getPageSetting('MaxMapBonuslimit') && !shouldFarm)
                 shouldDoMaps = false;
